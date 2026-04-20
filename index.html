@@ -66,12 +66,12 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:20px 48px;display:fl
 .phone-stat-l{font-size:6px;color:var(--ink3);text-transform:uppercase;letter-spacing:0.5px;}
 .phone-stat-v{font-family:'DM Mono',monospace;font-size:11px;color:var(--ink);font-weight:300;}
 .phone-stat.acc .phone-stat-v{color:var(--acc);}
-.phone-nav{display:flex;justify-content:space-around;padding:6px 0 10px;border-top:0.5px solid var(--border);}
-.phone-nav-item{display:flex;flex-direction:column;align-items:center;gap:2px;}
+.phone-nav{display:flex;justify-content:space-around;align-items:flex-end;padding:6px 8px 10px;border-top:0.5px solid var(--border);background:var(--surface);}
+.phone-nav-item{display:flex;flex-direction:column;align-items:center;gap:3px;flex:1;}
 .phone-nav-dot{width:4px;height:4px;border-radius:50%;}
-.phone-nav-lbl{font-size:6px;color:var(--ink3);letter-spacing:1px;text-transform:uppercase;}
-.phone-nav-center{display:flex;flex-direction:column;align-items:center;gap:3px;position:relative;top:-8px;}
-.phone-nav-btn{width:36px;height:36px;border-radius:50%;background:var(--acc);display:flex;align-items:center;justify-content:center;}
+.phone-nav-lbl{font-size:6px;color:var(--ink3);letter-spacing:1px;text-transform:uppercase;font-family:'Jost',sans-serif;}
+.phone-nav-center{display:flex;flex-direction:column;align-items:center;gap:3px;flex:1;position:relative;top:-10px;}
+.phone-nav-btn{width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;}
 
 /* STATS BAR */
 .stats-bar{background:var(--ink);padding:48px;display:flex;justify-content:center;gap:80px;flex-wrap:wrap;}
@@ -206,8 +206,10 @@ footer{background:var(--ink);padding:48px;display:flex;align-items:center;justif
         <a href="#how" class="btn-secondary">See how it works</a>
       </div>
     </div>
-    <div class="hero-right">
-      <div class="phone-mockup">
+    <div class="hero-right" style="gap:16px;align-items:center;">
+
+      <!-- PHONE 1: Camera/Analyze — terracotta theme -->
+      <div class="phone-mockup" style="width:230px;height:490px;margin-top:30px;">
         <div class="phone-notch"></div>
         <div class="phone-screen">
           <div class="phone-header">
@@ -223,8 +225,7 @@ footer{background:var(--ink);padding:48px;display:flex;align-items:center;justif
             </svg>
             <div class="phone-rec"><div class="rec-dot"></div>REC</div>
             <div class="phone-score"><div class="phone-score-n">84</div><div class="phone-score-l">form</div></div>
-            <svg width="180" height="240" viewBox="0 0 180 240">
-              <circle cx="90" cy="17" r="118" fill="none" stroke="#2A2520" stroke-width="0.5"/>
+            <svg width="160" height="210" viewBox="0 0 180 240">
               <path d="M 90 -85 A 118 118 0 0 1 196 70" fill="none" stroke="#B85C38" stroke-width="1.5" stroke-linecap="round"/>
               <circle cx="90" cy="26" r="13" fill="none" stroke="#D89070" stroke-width="1.5"/>
               <line x1="90" y1="39" x2="90" y2="94" stroke="#D89070" stroke-width="1.5"/>
@@ -242,7 +243,7 @@ footer{background:var(--ink);padding:48px;display:flex;align-items:center;justif
           </div>
           <div class="phone-feedback">
             <div class="phone-fb-label">AI Correction</div>
-            <div class="phone-fb-text">Hip rotation too early — initiate from your core, not your shoulders.</div>
+            <div class="phone-fb-text">Hip rotation too early — initiate from your core.</div>
             <div class="phone-stats">
               <div class="phone-stat"><div class="phone-stat-l">Set</div><div class="phone-stat-v">2/4</div></div>
               <div class="phone-stat"><div class="phone-stat-l">Time</div><div class="phone-stat-v">04:32</div></div>
@@ -250,15 +251,66 @@ footer{background:var(--ink);padding:48px;display:flex;align-items:center;justif
             </div>
           </div>
           <div class="phone-nav">
-            <div class="phone-nav-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ABA69E" stroke-width="1.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg><div class="phone-nav-lbl" style="color:#ABA69E;">Progress</div></div>
+            <div class="phone-nav-item"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#ABA69E" stroke-width="1.5"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg><div class="phone-nav-lbl">Session</div></div>
+            <div class="phone-nav-item"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#ABA69E" stroke-width="1.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg><div class="phone-nav-lbl">Progress</div></div>
             <div class="phone-nav-center">
-              <div class="phone-nav-btn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M2 12S5 5 12 5s10 7 10 7-3 7-10 7S2 12 2 12z"/></svg></div>
+              <div class="phone-nav-btn" style="width:34px;height:34px;background:#B85C38;box-shadow:0 4px 12px rgba(184,92,56,0.4);"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M2 12S5 5 12 5s10 7 10 7-3 7-10 7S2 12 2 12z"/></svg></div>
               <div class="phone-nav-lbl" style="color:#B85C38;">Analyze</div>
             </div>
-            <div class="phone-nav-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ABA69E" stroke-width="1.5"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg><div class="phone-nav-lbl" style="color:#ABA69E;">Me</div></div>
+            <div class="phone-nav-item"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#ABA69E" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg><div class="phone-nav-lbl">Friends</div></div>
+            <div class="phone-nav-item"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#ABA69E" stroke-width="1.5"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg><div class="phone-nav-lbl">Me</div></div>
           </div>
         </div>
       </div>
+
+      <!-- PHONE 2: Friends/Streaks — navy theme -->
+      <div class="phone-mockup" style="width:230px;height:490px;background:#0D1B2A;border-color:#1E2D3D;box-shadow:0 40px 80px rgba(13,27,42,0.3),0 0 0 8px #D8E4F0;">
+        <div class="phone-notch" style="background:#0D1B2A;"></div>
+        <div class="phone-screen" style="background:#0D1B2A;">
+          <div style="background:#0D1B2A;padding:26px 16px 14px;">
+            <div style="font-size:8px;letter-spacing:3px;color:#3A5068;text-transform:uppercase;margin-bottom:4px;font-family:'Jost',sans-serif;">Social</div>
+            <div style="font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:300;color:#EAF2FB;font-style:italic;">Friends <span style="font-style:normal;font-weight:500;color:#4A90D9;">&amp; streaks</span></div>
+          </div>
+          <div style="flex:1;overflow:hidden;padding:0 14px;">
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:10px;">
+              <div style="background:#1E2D3D;border-radius:12px;padding:12px 10px;"><div style="font-family:'DM Mono',monospace;font-size:20px;font-weight:300;color:#EAF2FB;line-height:1;">8.4</div><div style="font-size:7px;color:#3A5068;letter-spacing:1.5px;text-transform:uppercase;margin-top:3px;font-family:'Jost',sans-serif;">Avg streak</div><div style="font-size:9px;color:#4A90D9;margin-top:2px;font-family:'Jost',sans-serif;">+2 vs last wk</div></div>
+              <div style="background:#1E3A6E;border-radius:12px;padding:12px 10px;"><div style="font-family:'DM Mono',monospace;font-size:20px;font-weight:300;color:#EAF2FB;line-height:1;">5</div><div style="font-size:7px;color:rgba(234,242,251,0.4);letter-spacing:1.5px;text-transform:uppercase;margin-top:3px;font-family:'Jost',sans-serif;">Active now</div></div>
+            </div>
+            <div style="font-size:8px;letter-spacing:1.5px;color:#3A5068;text-transform:uppercase;margin-bottom:8px;font-family:'Jost',sans-serif;">Streak ranking</div>
+            <div style="background:#142233;border-radius:14px;padding:10px 12px;">
+              <div style="display:flex;align-items:center;gap:8px;padding:7px 0;border-bottom:0.5px solid #1E2D3D;">
+                <div style="font-size:10px;color:#4A90D9;width:14px;font-family:'DM Mono',monospace;font-weight:400;">1</div>
+                <div style="width:26px;height:26px;border-radius:50%;background:#1E3A6E;display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:500;color:#7EB8F7;flex-shrink:0;font-family:'Jost',sans-serif;">LM</div>
+                <div style="flex:1;"><div style="font-size:11px;color:#EAF2FB;font-family:'Jost',sans-serif;font-weight:400;">Lukas M.</div><div style="font-size:8px;color:#3A5068;font-family:'Jost',sans-serif;">Football</div></div>
+                <div style="display:flex;align-items:center;gap:2px;background:#1E2D3D;border-radius:20px;padding:3px 7px;"><span style="font-size:10px;">🔥</span><span style="font-size:10px;font-family:'DM Mono',monospace;color:#F97316;font-weight:300;">21d</span></div>
+              </div>
+              <div style="display:flex;align-items:center;gap:8px;padding:7px 0;border-bottom:0.5px solid #1E2D3D;">
+                <div style="font-size:10px;color:#6B8090;width:14px;font-family:'DM Mono',monospace;">2</div>
+                <div style="width:26px;height:26px;border-radius:50%;background:#1A2E1A;display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:500;color:#6BA88A;flex-shrink:0;font-family:'Jost',sans-serif;">AW</div>
+                <div style="flex:1;"><div style="font-size:11px;color:#EAF2FB;font-family:'Jost',sans-serif;font-weight:400;">Anna W.</div><div style="font-size:8px;color:#3A5068;font-family:'Jost',sans-serif;">Running</div></div>
+                <div style="display:flex;align-items:center;gap:2px;background:#1E2D3D;border-radius:20px;padding:3px 7px;"><span style="font-size:10px;">🔥</span><span style="font-size:10px;font-family:'DM Mono',monospace;color:#F97316;font-weight:300;">14d</span></div>
+              </div>
+              <div style="display:flex;align-items:center;gap:8px;padding:7px 0;">
+                <div style="font-size:10px;color:#6B8090;width:14px;font-family:'DM Mono',monospace;">3</div>
+                <div style="width:26px;height:26px;border-radius:50%;background:#2A1A14;display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:500;color:#D89070;flex-shrink:0;font-family:'Jost',sans-serif;">SR</div>
+                <div style="flex:1;"><div style="font-size:11px;color:#EAF2FB;font-family:'Jost',sans-serif;font-weight:400;">Sofia R.</div><div style="font-size:8px;color:#3A5068;font-family:'Jost',sans-serif;">Tennis</div></div>
+                <div style="display:flex;align-items:center;gap:2px;background:#1E2D3D;border-radius:20px;padding:3px 7px;"><span style="font-size:10px;">🔥</span><span style="font-size:10px;font-family:'DM Mono',monospace;color:#F97316;font-weight:300;">9d</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="phone-nav" style="background:#0D1B2A;border-top-color:#1E2D3D;">
+            <div class="phone-nav-item"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#3A5068" stroke-width="1.5"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg><div class="phone-nav-lbl" style="color:#3A5068;">Session</div></div>
+            <div class="phone-nav-item"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#3A5068" stroke-width="1.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg><div class="phone-nav-lbl" style="color:#3A5068;">Progress</div></div>
+            <div class="phone-nav-center">
+              <div class="phone-nav-btn" style="width:34px;height:34px;background:#1E3A6E;box-shadow:0 4px 12px rgba(30,58,110,0.5);"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#7EB8F7" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M2 12S5 5 12 5s10 7 10 7-3 7-10 7S2 12 2 12z"/></svg></div>
+              <div class="phone-nav-lbl" style="color:#4A90D9;">Analyze</div>
+            </div>
+            <div class="phone-nav-item"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#4A90D9" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg><div class="phone-nav-lbl" style="color:#4A90D9;">Friends</div></div>
+            <div class="phone-nav-item"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#3A5068" stroke-width="1.5"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg><div class="phone-nav-lbl" style="color:#3A5068;">Me</div></div>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 </div>
@@ -322,19 +374,19 @@ footer{background:var(--ink);padding:48px;display:flex;align-items:center;justif
   <div class="features-grid">
     <div class="feature-list">
       <div class="feature-item">
-        <div class="feature-icon" style="background:#F5EDE7;">🎯</div>
+        <div class="feature-icon" style="background:#F5EDE7;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#B85C38" stroke-width="1.8"><circle cx="12" cy="12" r="3"/><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4"/></svg></div>
         <div><div class="feature-title">Real-time form analysis</div><div class="feature-text">Live camera feedback on every rep, drill and movement. Corrections appear as you train, not after.</div></div>
       </div>
       <div class="feature-item">
-        <div class="feature-icon" style="background:#E6EFEC;">📊</div>
+        <div class="feature-icon" style="background:#E6EFEC;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3A6B60" stroke-width="1.8"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
         <div><div class="feature-title">Session tracking</div><div class="feature-text">Log technique, conditioning or strength sessions. Track duration, intensity and your personal metrics like sprint times.</div></div>
       </div>
       <div class="feature-item">
-        <div class="feature-icon" style="background:#F5EDE7;">🔥</div>
+        <div class="feature-icon" style="background:#F5EDE7;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#B85C38" stroke-width="1.8"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
         <div><div class="feature-title">Streak system with friends</div><div class="feature-text">Set your own training schedule and compete with friends on a streak leaderboard. Streak shields protect your streak on off days.</div></div>
       </div>
       <div class="feature-item">
-        <div class="feature-icon" style="background:#EEEAF5;">🏟️</div>
+        <div class="feature-icon" style="background:#EEEAF5;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#6B5CB8" stroke-width="1.8"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
         <div><div class="feature-title">Club dashboard</div><div class="feature-text">Coaches get a team overview with individual athlete stats, session history and form score trends. Club colors built in.</div></div>
       </div>
     </div>
