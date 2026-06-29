@@ -140,7 +140,7 @@ section{padding:100px 48px;max-width:1200px;margin:0 auto;}
 .video-section{background:var(--ink);padding:100px 48px;text-align:center;}
 .video-section .section-title{color:#F6F3EE;}
 .video-section .section-sub{color:#5A5550;margin:0 auto 48px;}
-.video-embed{max-width:800px;margin:0 auto;background:#2A2520;border-radius:20px;aspect-ratio:16/9;display:flex;align-items:center;justify-content:center;border:0.5px solid #3A3530;overflow:hidden;}
+..video-embed{max-width:800px;margin:0 auto;border-radius:20px;overflow:hidden;position:relative;padding-bottom:56.25%;height:0;}.video-embed iframe{position:absolute;top:0;left:0;width:100%;height:100%;}
 .video-placeholder{text-align:center;}
 .video-play{width:64px;height:64px;border-radius:50%;background:var(--acc);display:flex;align-items:center;justify-content:center;margin:0 auto 16px;cursor:pointer;}
 .video-placeholder-text{font-size:13px;color:#5A5550;letter-spacing:1px;}
@@ -437,9 +437,9 @@ footer{background:var(--ink);padding:48px;display:flex;align-items:center;justif
     <div class="section-eyebrow" style="color:#5A5550;">See it in action</div>
     <h2 class="section-title" style="max-width:600px;margin:0 auto 16px;">Watch RepRight <b style="color:var(--acc);">coach you live</b></h2>
     <p class="section-sub" style="color:#5A5550;">A 45-second look at what it feels like to train with an AI coach watching every rep.</p
-      <div class="video-embed">
-  <iframe width="100%" height="100%" src="https://www.youtube.com/embed/JIsRjClYhvc?si=7auq5yogQTOoxEkc" title="RepRight pitch video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="border-radius:20px;"></iframe>
-      </div>
+     <div class="video-embed">
+  <iframe src="https://www.youtube.com/embed/JIsRjClYhvc?si=7auq5yogQTOoxEkc" title="RepRight pitch video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
     </div>
   </div>
 </div>
